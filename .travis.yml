@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t kunwarf/work-flow -f Dockerfile .
+  - docker build -t kunwarf/work-flow .
 
 script:
  - docker run -e CI=true kunwarf/work-flow npm run test -- --coverage
